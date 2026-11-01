@@ -1,5 +1,7 @@
 # Sahithya K. — Portfolio
 
+**Live site: https://sahithya74.github.io/Portfolio/**
+
 An animated portfolio built with React, Vite, TypeScript, Tailwind CSS, Framer Motion, GSAP and React Three Fiber.
 
 ## Run it
@@ -23,7 +25,8 @@ Messages are delivered with [Web3Forms](https://web3forms.com) (free).
    VITE_CONTACT_EMAIL=you@example.com   # optional, shows an Email link on the site
    ```
 
-3. Restart `npm run dev` (or rebuild). Your hosting provider also needs these two variables set.
+3. Restart `npm run dev` (or rebuild).
+4. For the live site, add the same two names under the repository's **Settings → Secrets and variables → Actions → Variables**, then re-run the deploy workflow (or push any change).
 
 Until a key is set, the form validates input and then tells the visitor plainly that it is not connected yet. It never reports success without an actual delivery.
 
@@ -46,6 +49,10 @@ Common updates:
 - **Résumé**: put the PDF in `public/` and set `resume: '/Sahithya-K-Resume.pdf'` in `personal.ts`.
 - **Profile photo**: replace `src/assets/profile.jpg` (and `public/og-image.jpg` for link previews).
 
-## Hosting
+## Deployment
 
-The site is static apart from the Web3Forms call. Case-study pages use client-side routes (`/project/<slug>`), so configure your host to serve `index.html` for unknown paths. On Netlify that's a `_redirects` file with `/* /index.html 200`; Vercel does this automatically for Vite projects.
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to the `gh-pages` branch. GitHub Pages serves that branch at https://sahithya74.github.io/Portfolio/.
+
+- The build uses the base path `/Portfolio/` (see `vite.config.ts`). If you rename the repository, change it there too.
+- Case-study pages use client-side routes (`/project/<slug>`). The workflow copies `index.html` to `404.html` so those links open directly.
+- To host somewhere else at a domain root, build with `BASE_PATH=/ npm run build`.
