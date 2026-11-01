@@ -37,7 +37,7 @@ All text lives in `src/data/`:
 | File | What it holds |
 | --- | --- |
 | `personal.ts` | Name, roles, quote, About text, links, résumé path, philosophy, traits |
-| `projects.ts` | The six projects: descriptions, features, URLs, tech stack, screenshots |
+| `projects.ts` | The projects: descriptions, features, URLs, tech stack, screenshots |
 | `skills.ts` | Skill groups and the short badge labels |
 | `experience.ts` | Aaroh club role (with an optional `duration`) and education |
 

@@ -113,8 +113,34 @@ export const projects: Project[] = [
     accent: ['#C7C5CA', '#D8C9E5'],
   },
   {
-    slug: 'transaxis',
+    slug: 'sigaram-creative',
     number: '04',
+    title: 'Sigaram Creative',
+    category: 'client',
+    label: 'Client Website · Live Project',
+    url: 'https://sigaramcreative.in',
+    github: '',
+    live: true,
+    description:
+      'A client website for Sigaram, a digital marketing agency, designed and developed around the client’s requirements and hosted live.',
+    problem: 'The agency needed an online presence that reflects its brand and introduces it to prospective clients.',
+    solution:
+      'A website designed to the client’s requirements, built as a responsive interface and deployed on a live server.',
+    features: [
+      'Client requirement analysis',
+      'Brand-focused website design',
+      'UI/UX design',
+      'Responsive development',
+      'Live deployment',
+    ],
+    contribution: ['Requirement analysis', 'Website design', 'Responsive development', 'Deployment'],
+    tech: [],
+    screenshots: [],
+    accent: ['#D8C9E5', '#B7A2C9'],
+  },
+  {
+    slug: 'transaxis',
+    number: '05',
     title: 'TransAxis',
     category: 'enterprise',
     label: 'Enterprise Application · Transport Fleet Management',
@@ -149,7 +175,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'labops',
-    number: '05',
+    number: '06',
     title: 'LabOps',
     category: 'edtech',
     label: 'Smart Lab Monitoring · Educational Technology',
@@ -179,7 +205,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'siteledger',
-    number: '06',
+    number: '07',
     title: 'SiteLedger',
     category: 'enterprise',
     label: 'Enterprise Application · Civil Engineering Management',
